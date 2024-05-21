@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods</title>
+</head>
+<body>
+    <h1>FOODS</h1>
+    <p>Welcome user: {{ username }}</p>
+
+    {% for item in food %}
+        <div>
+            <p>Favorite Food: {{ item[0] }}</p>
+            <img src="{{ url_for('static', filename='image/' + item[1]) }}" alt="{{ item[0] }}">
+        </div>
+    {% endfor %}
+</body>
+</html>
+
